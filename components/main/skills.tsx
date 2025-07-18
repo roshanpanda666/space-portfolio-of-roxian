@@ -14,7 +14,7 @@ export const Skills = () => {
         transition={{ duration: 0.6 }}
         className="w-[90%] max-w-6xl flex flex-col items-center gap-6"
       >
-        <h2 className="text-4xl font-extrabold text-white text-center">
+        <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">
           Fullstack Development
         </h2>
         <div className="flex justify-center items-center flex-wrap gap-7 mt-6">
@@ -44,7 +44,7 @@ export const Skills = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="w-[90%] max-w-6xl flex flex-col items-center gap-6"
       >
-        <h2 className="text-4xl font-extrabold text-white text-center">
+        <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">
           AI & Machine Learning
         </h2>
         <div className="flex justify-center items-center flex-wrap gap-7 mt-6">
@@ -70,7 +70,7 @@ export const Skills = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="w-[90%] max-w-6xl flex justify-center flex-col items-center gap-6"
       >
-        <h2 className="text-4xl font-extrabold text-white text-center">IoT</h2>
+        <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">IoT</h2>
         <div className="flex justify-center items-center flex-wrap gap-7 mt-6">
           <Skill name="C++" image="https://cdn.worldvectorlogo.com/logos/c.svg" />
           <Skill name="PyFirmata" image="https://media.licdn.com/dms/image/v2/C5612AQFjxSAcmEb6Hw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1520225888352?e=2147483647&v=beta&t=G8oY30Ri_YrZo12FCua7mQVwW2yvSbz4eEqowYtV7zc" />
@@ -86,7 +86,7 @@ export const Skills = () => {
         transition={{ duration: 0.6, delay: 0.6 }}
         className="w-[90%] max-w-6xl flex flex-col items-center gap-6"
       >
-        <h2 className="text-4xl font-extrabold text-white text-center">Database</h2>
+        <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">Database</h2>
         <div className="flex justify-center items-center flex-wrap gap-7 mt-6">
           <Skill name="Firebase" image="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" />
           <Skill name="MongoDB" image="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" />
@@ -100,7 +100,7 @@ export const Skills = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="w-[90%] max-w-6xl flex flex-col items-center gap-6"
       >
-        <h2 className="text-4xl font-extrabold text-white text-center">Authentication</h2>
+        <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">Authentication</h2>
         <div className="flex justify-center items-center flex-wrap gap-7 mt-6">
           <Skill name="JWT" image="https://images.seeklogo.com/logo-png/42/1/jwt-logo-png_seeklogo-428033.png" />
           <Skill name="Auth.js" image="https://avatars.githubusercontent.com/u/67470890?s=280&v=4" />
@@ -114,7 +114,7 @@ export const Skills = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
         className="w-[90%] max-w-6xl flex flex-col items-center gap-6"
       >
-        <h2 className="text-4xl font-extrabold text-white text-center">Desktop Apps</h2>
+        <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">Desktop Apps</h2>
         <div className="flex justify-center items-center flex-wrap gap-7 mt-6">
           <Skill name="Tkinter" image="https://i.ytimg.com/vi/hBMU-GD22TI/hqdefault.jpg" />
           <Skill name="CustomTkinter" image="https://styles.redditmedia.com/t5_8tx64t/styles/communityIcon_kbz7e49k7obb1.png" />
@@ -128,7 +128,7 @@ export const Skills = () => {
         transition={{ duration: 0.6, delay: 0.9 }}
         className="w-[90%] max-w-6xl flex flex-col items-center gap-6"
       >
-        <h2 className="text-4xl font-extrabold text-white text-center">Tools</h2>
+        <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">Tools</h2>
         <div className="flex justify-center items-center flex-wrap gap-7 mt-6">
           <Skill name="Figma" image="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" />
           <Skill name="Canva" image="https://cdn.worldvectorlogo.com/logos/canva-1.svg" />
