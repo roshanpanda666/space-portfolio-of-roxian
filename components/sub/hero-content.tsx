@@ -29,7 +29,6 @@ export const HeroContent = () => {
             </h1>
           </motion.div>
         </div>
-        
 
         {/* 🚀 Hero Title */}
         <motion.div
@@ -50,12 +49,12 @@ export const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          I'm <strong className="text-white">Sabyasachi</strong>, a multi-stack developer obsessed with innovation. I specialize in{" "}
+          I&apos;m <strong className="text-white">Sabyasachi</strong>, a multi-stack developer obsessed with innovation. I specialize in{" "}
           <span className="text-purple-400 font-semibold">Fullstack Development</span>,{" "}
           <span className="text-cyan-400 font-semibold">AI/ML</span>,{" "}
           <span className="text-pink-400 font-semibold">IoT Systems</span>, and{" "}
           <span className="text-green-400 font-semibold">GUI Design</span>.
-          With tools like <strong>Next.js</strong>, <strong>TensorFlow</strong>, <strong>LangChain</strong>, <strong>MongoDB</strong> & more — I craft tech that's not just functional but futuristic.
+          With tools like <strong>Next.js</strong>, <strong>TensorFlow</strong>, <strong>LangChain</strong>, <strong>MongoDB</strong> &amp; more — I craft tech that&apos;s not just functional but futuristic.
         </motion.p>
 
         {/* ⚡ Call to Action */}
@@ -68,7 +67,6 @@ export const HeroContent = () => {
             Learn more
           </motion.a>
         </div>
-        
       </div>
 
       {/* 👨‍💻 Hero Image */}
