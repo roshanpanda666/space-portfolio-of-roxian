@@ -23,7 +23,7 @@ export const HeroContent = () => {
         <div className="flex justify-center items-center lg:justify-start">
   <motion.div
     variants={slideInFromTop}
-    className="Welcome-box py-4 px-6 border border-[#7042f88b] bg-[#1a1a1a]/80 rounded-xl shadow-lg "
+    className="Welcome-box py-4 px-6 bg-[#0702158e] shadow-lg lg:shadow-[#2A0E61]/50 lg:bg-[#03001427] backdrop-blur-md rounded-xl "
   >
     <div className="flex items-center">
       <SparklesIcon className="text-[#b49bff] mr-3 h-6 w-6" />
