@@ -3,6 +3,8 @@
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Typewriter } from 'react-simple-typewriter'
+
 import {
   slideInFromLeft,
   slideInFromRight,
@@ -16,19 +18,35 @@ export const HeroContent = () => {
       animate="visible"
       className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-center lg:text-start">
+      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-center lg:text-start w">
         {/* 🔮 Welcome Badge */}
         <div className="flex justify-center items-center lg:justify-start">
-          <motion.div
-            variants={slideInFromTop}
-            className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]]"
-          >
-            <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-            <h1 className="Welcome-text text-[13px]">
-              Sabyasachi Panda • Fullstack | AI | IoT Developer
-            </h1>
-          </motion.div>
-        </div>
+  <motion.div
+    variants={slideInFromTop}
+    className="Welcome-box py-4 px-6 border border-[#7042f88b] bg-[#1a1a1a]/80 rounded-xl shadow-lg "
+  >
+    <div className="flex items-center">
+      <SparklesIcon className="text-[#b49bff] mr-3 h-6 w-6" />
+      <div className="Welcome-text text-3xl text-white font-semibold">
+        <Typewriter
+          words={[
+            'Sabyasachi Panda (Roshan)',
+            '• Fullstack Developer',
+            '• AI enthusiast',
+            '• IoT Systems tinkerer',
+            '• GUI Designer',
+          ]}
+          loop={true}
+          cursor
+          cursorStyle="|"
+          typeSpeed={50}
+          deleteSpeed={30}
+          delaySpeed={2000}
+        />
+      </div>
+    </div>
+  </motion.div>
+</div>
 
         {/* 🚀 Hero Title */}
         <motion.div
@@ -70,9 +88,10 @@ export const HeroContent = () => {
       </div>
 
       {/* 👨‍💻 Hero Image */}
+      <div className="lg:block hidden">
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
+        className="w-full h-full flex justify-center items-center "
       >
         <Image
           src="/hero-bg.svg"
@@ -83,6 +102,8 @@ export const HeroContent = () => {
           className="select-none"
         />
       </motion.div>
+      </div>
+      
     </motion.div>
   );
 };
