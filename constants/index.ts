@@ -359,7 +359,7 @@ export const NAV_LINKS = [
   },
   {
     title: "Connect",
-    link: "#connect",
+    link: "/connect",
   },
 ] as const;
 

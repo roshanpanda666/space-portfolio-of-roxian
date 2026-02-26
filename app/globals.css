@@ -4,6 +4,33 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Themed Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030014;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #7042f8, #b44adf);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #8a63f9, #c362eb);
+}
+
 .cursive {
   font-family: "Cedarville Cursive", cursive;
 }
@@ -242,4 +269,57 @@ html {
   border: 1px solid rgba(112, 66, 248, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+/* ===== Build Process Timeline ===== */
+.build-step-card {
+  background: rgba(3, 0, 20, 0.55);
+  border: 1px solid rgba(112, 66, 248, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.build-step-card:hover {
+  border-color: rgba(112, 66, 248, 0.3);
+  box-shadow: 0 6px 30px rgba(112, 66, 248, 0.1);
+  transform: translateX(4px);
+}
+
+.build-substep-card {
+  background: rgba(112, 66, 248, 0.05);
+  border: 1px solid rgba(112, 66, 248, 0.1);
+  border-radius: 8px;
+}
+
+/* ===== Utilities ===== */
+.section-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* ===== Connect Page ===== */
+.connect-social-btn {
+  background: rgba(3, 0, 20, 0.5);
+  border: 1px solid rgba(112, 66, 248, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.connect-social-btn:hover {
+  border-color: rgba(112, 66, 248, 0.35);
+  background: rgba(112, 66, 248, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(112, 66, 248, 0.1);
+}
+
+.connect-rose-input {
+  background: rgba(3, 0, 20, 0.6);
+  border: 1px solid rgba(112, 66, 248, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.connect-rose-input:focus-within {
+  border-color: rgba(112, 66, 248, 0.4);
+  box-shadow: 0 0 25px rgba(112, 66, 248, 0.1);
 }

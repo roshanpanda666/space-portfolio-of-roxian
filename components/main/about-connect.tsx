@@ -144,7 +144,7 @@ export const AboutConnect = () => {
     <section
       id="connect"
       ref={ref}
-      className="relative w-full py-20 px-6 md:px-20 z-[20]"
+      className="relative w-full py-20 px-6 md:px-20 z-[20] overflow-hidden"
     >
       {/* Section Header */}
       <motion.div
@@ -167,7 +167,7 @@ export const AboutConnect = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={fadeInUp(0.1)}
-        className="about-glass-card max-w-4xl mx-auto p-8 md:p-10 mb-16 rounded-2xl"
+        className="about-glass-card max-w-4xl mx-auto p-8 md:p-10 mb-16 rounded-2xl text-center md:text-left"
       >
         <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
           Sabyasachi Panda
@@ -183,7 +183,7 @@ export const AboutConnect = () => {
           <span className="text-pink-400 font-medium">SaaS architecture</span>, where I
           transform complex technical challenges into user-centric digital products.
         </p>
-        <p className="text-gray-400 leading-relaxed italic border-l-2 border-purple-500 pl-4">
+        <p className="text-gray-400 leading-relaxed italic border-l-2 border-purple-500 pl-4 text-left">
           Driven by the philosophy of &quot;AI Beyond Chatbots,&quot; I specialize in creating
           autonomous systems that interact with the real world—from event-driven query
           dispatchers to AIoT surveillance frameworks.
@@ -213,7 +213,7 @@ export const AboutConnect = () => {
               variants={fadeInUp()}
               className="about-glass-card p-6 rounded-xl group hover:scale-[1.03] transition-transform duration-300"
             >
-              <span className="text-3xl mb-3 block">{comp.icon}</span>
+              <span className="text-3xl mb-3 block emoji-reset">{comp.icon}</span>
               <h4 className="text-white font-semibold text-lg mb-2 group-hover:text-purple-400 transition-colors">
                 {comp.title}
               </h4>
@@ -252,7 +252,7 @@ export const AboutConnect = () => {
                 className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.gradient} opacity-60 group-hover:opacity-100 transition-opacity`}
               />
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-2xl">{item.icon}</span>
+                <span className="text-2xl emoji-reset">{item.icon}</span>
                 <h4 className="text-white font-semibold text-lg">
                   {item.title}
                 </h4>

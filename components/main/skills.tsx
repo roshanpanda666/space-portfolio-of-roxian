@@ -52,7 +52,7 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col justify-center items-center py-20 gap-32"
+      className="flex flex-col justify-center items-center py-20 gap-32 overflow-hidden"
     >
       {/* Section Template */}
       {skillSections.map(({ title, skills }, sectionIndex) => (

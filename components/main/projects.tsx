@@ -184,7 +184,7 @@ export const Projects = () => {
     <section
       id="projects"
       ref={ref}
-      className="relative w-full py-20 px-6 md:px-20 z-[20]"
+      className="relative w-full py-20 px-6 md:px-20 z-[20] overflow-hidden"
     >
       {/* Section Header */}
       <motion.div
@@ -261,7 +261,7 @@ const ProjectCard = ({
           <div>
             <div className="flex items-center gap-3 mb-2">
               <motion.span
-                className="text-2xl"
+                className="text-2xl emoji-reset"
                 whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.2 }}
                 transition={{ duration: 0.5 }}
               >
