@@ -66,3 +66,180 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* About / Connect section glass card */
+.about-glass-card {
+  background: rgba(3, 0, 20, 0.6);
+  border: 1px solid rgba(112, 66, 248, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(112, 66, 248, 0.08),
+    inset 0 0 20px rgba(112, 66, 248, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.about-glass-card:hover {
+  border-color: rgba(112, 66, 248, 0.35);
+  box-shadow: 0 8px 40px rgba(112, 66, 248, 0.15),
+    inset 0 0 20px rgba(112, 66, 248, 0.06);
+}
+
+/* Social link buttons */
+.about-social-btn {
+  background: rgba(3, 0, 20, 0.5);
+  border: 1px solid rgba(112, 66, 248, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+.about-social-btn:hover {
+  background: rgba(112, 66, 248, 0.12);
+  border-color: rgba(112, 66, 248, 0.45);
+  box-shadow: 0 4px 20px rgba(112, 66, 248, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Project cards */
+.project-card {
+  background: rgba(3, 0, 20, 0.6);
+  border: 1px solid rgba(112, 66, 248, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.project-card:hover {
+  border-color: rgba(112, 66, 248, 0.3);
+  box-shadow: 0 8px 40px rgba(112, 66, 248, 0.12);
+  transform: translateY(-4px);
+}
+
+.project-tech-tag {
+  background: rgba(112, 66, 248, 0.1);
+  border: 1px solid rgba(112, 66, 248, 0.2);
+}
+
+.project-link-btn {
+  background: rgba(112, 66, 248, 0.08);
+  border: 1px solid rgba(112, 66, 248, 0.25);
+}
+.project-link-btn:hover {
+  background: rgba(112, 66, 248, 0.2);
+  border-color: rgba(112, 66, 248, 0.5);
+}
+
+/* ===== R.O.S.E. Chat Widget ===== */
+.rose-fab {
+  background: linear-gradient(135deg, #7042f8 0%, #b44adf 50%, #e94a8a 100%);
+  box-shadow: 0 4px 24px rgba(112, 66, 248, 0.4), 0 0 40px rgba(112, 66, 248, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.rose-fab:hover {
+  box-shadow: 0 6px 32px rgba(112, 66, 248, 0.55), 0 0 60px rgba(112, 66, 248, 0.2);
+}
+
+.rose-chat-window {
+  background: rgba(3, 0, 20, 0.92);
+  border: 1px solid rgba(112, 66, 248, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.5), 0 0 48px rgba(112, 66, 248, 0.1);
+}
+
+.rose-chat-header {
+  background: rgba(112, 66, 248, 0.06);
+  border-bottom: 1px solid rgba(112, 66, 248, 0.12);
+}
+
+.rose-msg-user {
+  background: linear-gradient(135deg, #7042f8, #b44adf);
+  border-radius: 18px 18px 4px 18px;
+}
+
+.rose-msg-bot {
+  background: rgba(112, 66, 248, 0.08);
+  border: 1px solid rgba(112, 66, 248, 0.12);
+  border-radius: 18px 18px 18px 4px;
+}
+
+.rose-typing-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(112, 66, 248, 0.6);
+  animation: roseBounce 1s infinite;
+  display: inline-block;
+}
+@keyframes roseBounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+
+.rose-chat-input-area {
+  background: rgba(112, 66, 248, 0.04);
+  border-top: 1px solid rgba(112, 66, 248, 0.1);
+}
+
+.rose-chat-input {
+  background: rgba(112, 66, 248, 0.08);
+  border: 1px solid rgba(112, 66, 248, 0.15);
+  transition: border-color 0.2s;
+}
+.rose-chat-input:focus {
+  border-color: rgba(112, 66, 248, 0.4);
+}
+
+.rose-send-btn {
+  background: linear-gradient(135deg, #7042f8, #b44adf);
+  border: none;
+}
+.rose-send-btn:hover:not(:disabled) {
+  box-shadow: 0 2px 16px rgba(112, 66, 248, 0.4);
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ===== Footer ===== */
+.footer-icon-btn {
+  background: rgba(112, 66, 248, 0.06);
+  border: 1px solid rgba(112, 66, 248, 0.12);
+  transition: all 0.3s;
+}
+.footer-icon-btn:hover {
+  background: rgba(112, 66, 248, 0.15);
+  border-color: rgba(112, 66, 248, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(112, 66, 248, 0.15);
+}
+
+/* ===== Hero R.O.S.E. Input ===== */
+.rose-hero-input-wrapper {
+  background: rgba(3, 0, 20, 0.6);
+  border: 1px solid rgba(112, 66, 248, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.3s;
+}
+.rose-hero-input-wrapper:focus-within {
+  border-color: rgba(112, 66, 248, 0.45);
+  box-shadow: 0 0 20px rgba(112, 66, 248, 0.1);
+}
+
+.rose-hero-send {
+  background: linear-gradient(135deg, #7042f8, #b44adf);
+}
+.rose-hero-send:hover:not(:disabled) {
+  box-shadow: 0 2px 12px rgba(112, 66, 248, 0.4);
+}
+
+.rose-hero-reply {
+  background: rgba(112, 66, 248, 0.06);
+  border: 1px solid rgba(112, 66, 248, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}

@@ -20,7 +20,7 @@ export const SkillDataProvider = ({
   index,
 }: SkillDataProviderProps) => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
   });
 
   const imageVariants = {
