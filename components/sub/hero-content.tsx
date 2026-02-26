@@ -61,7 +61,7 @@ export const HeroContent = () => {
           >
             <div className="flex items-center">
               <SparklesIcon className="text-[#b49bff] mr-3 h-6 w-6" />
-              <div className="Welcome-text text-lg lg:text-3xl text-white font-semibold">
+              <div className="Welcome-text text- lg:text-3xl text-white font-semibold">
                 <Typewriter
                   words={[
                     "Sabyasachi Panda (Roshan)",
