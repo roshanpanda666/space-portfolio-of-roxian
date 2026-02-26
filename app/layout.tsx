@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import type { PropsWithChildren } from "react";
 
 import { Footer } from "@/components/main/footer";
+import { LoadingScreen } from "@/components/main/loading-screen";
 import { Navbar } from "@/components/main/navbar";
 import { RoseChat } from "@/components/main/rose-chat";
 import { StarsCanvas } from "@/components/main/star-background";
@@ -28,11 +29,13 @@ export default function RootLayout({ children }: PropsWithChildren) {
           inter.className
         )}
       >
-        <StarsCanvas />
-        <Navbar />
-        {children}
-        <Footer />
-        <RoseChat />
+        <LoadingScreen>
+          <StarsCanvas />
+          <Navbar />
+          {children}
+          <Footer />
+          <RoseChat />
+        </LoadingScreen>
       </body>
     </html>
   );

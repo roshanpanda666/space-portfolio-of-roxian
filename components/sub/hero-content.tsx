@@ -50,9 +50,9 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] overflow-hidden"
+      className="relative flex flex-col lg:flex-row items-center justify-center px-4 md:px-20 mt-28 lg:mt-40 w-full z-[20] overflow-hidden gap-10 lg:gap-0"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-center lg:text-start w">
+      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-center lg:text-start relative z-10">
         {/* 🔮 Welcome Badge */}
         <div className="flex justify-center items-center lg:justify-start">
           <motion.div
@@ -189,7 +189,7 @@ const HeroImage3D = () => {
 
   return (
     <div 
-      className="lg:block hidden relative w-[800px] h-[400px] cursor-pointer lg:translate-x-4 mx-auto overflow-hidden"
+      className="lg:relative lg:w-[800px] lg:max-w-none lg:h-[400px] lg:mt-0 lg:translate-x-4 lg:opacity-100 absolute bottom-[-30px] left-0 w-full h-[280px] opacity-25 pointer-events-none lg:pointer-events-auto cursor-pointer overflow-hidden"
       onMouseMove={handleMouse}
       onMouseLeave={handleMouseLeave}
     >
