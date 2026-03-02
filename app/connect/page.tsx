@@ -18,7 +18,7 @@ import { Typewriter } from "react-simple-typewriter";
 const SOCIALS = [
   { icon: RxGithubLogo, link: "https://github.com/roshanpanda666", label: "GitHub", color: "hover:text-gray-100" },
   { icon: RxLinkedinLogo, link: "https://www.linkedin.com/in/sabyasachi-panda-351870256/", label: "LinkedIn", color: "hover:text-blue-400" },
-  { icon: RxInstagramLogo, link: "https://www.instagram.com/0xsabyasachi/", label: "Instagram", color: "hover:text-pink-400" },
+  { icon: RxInstagramLogo, link: "https://www.instagram.com/roxian_0x", label: "Instagram", color: "hover:text-pink-400" },
   { icon: RxTwitterLogo, link: "https://x.com/Roshan_panda007", label: "X", color: "hover:text-sky-400" },
   { icon: RxEnvelopeClosed, link: "mailto:sabyasachipanda410@gmail.com", label: "Email", color: "hover:text-yellow-400" },
   { icon: SiMedium, link: "https://medium.com/@sabyasachipanda410", label: "Medium", color: "hover:text-green-400" },

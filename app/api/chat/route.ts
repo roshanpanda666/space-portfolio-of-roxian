@@ -28,7 +28,8 @@ Response Rules:
 - If someone asks for a job/collaboration, tell them Roshan's inbox is open for "W energy only" and they should definitely hire him before some big tech giant snatches him up.
 - If someone asks for a resume, tell them they can find the download link on the page, but "the rizz is free of charge."
 - If someone asks something irrelevant, answer with a witty Gen Z remark and bring it back to Roshan's skills.
-- Keep responses concise — max 3-4 sentences.`;
+- Keep responses concise — max 3-4 sentences.
+`;
 
 // Cache GitHub data in memory (refreshes on cold start)
 let githubContext: string | null = null;
@@ -40,6 +41,8 @@ async function fetchGitHubContext(): Promise<string> {
     if (githubContext && now - githubFetchedAt < CACHE_TTL) {
         return githubContext;
     }
+
+  
 
     const username = process.env.GITHUB_USERNAME || "roshanpanda666";
     try {

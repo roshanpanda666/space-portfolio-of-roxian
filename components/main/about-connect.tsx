@@ -28,7 +28,7 @@ const SOCIAL_LINKS = [
   {
     name: "Instagram",
     icon: RxInstagramLogo,
-    link: "https://www.instagram.com/0xsabyasachi/",
+    link: "https://www.instagram.com/roxian_0x",
     color: "hover:text-pink-400",
   },
   {
