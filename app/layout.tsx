@@ -4,6 +4,7 @@ import type { PropsWithChildren } from "react";
 
 import { Footer } from "@/components/main/footer";
 import { LoadingScreen } from "@/components/main/loading-screen";
+import { MusicToggle } from "@/components/main/music-toggle";
 import { Navbar } from "@/components/main/navbar";
 import { RoseChat } from "@/components/main/rose-chat";
 import { StarsCanvas } from "@/components/main/star-background";
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           {children}
           <Footer />
           <RoseChat />
+          <MusicToggle />
         </LoadingScreen>
       </body>
     </html>

@@ -483,3 +483,74 @@ html {
   background: radial-gradient(circle, #d39c7e 40%, #a87655 100%);
   box-shadow: 0 0 12px rgba(211, 156, 126, 0.5);
 }
+
+/* ===== Music Toggle Button ===== */
+.music-toggle-btn {
+  position: fixed;
+  bottom: 100px;
+  left: 24px;
+  z-index: 50;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(112, 66, 248, 0.25);
+  background: rgba(3, 0, 20, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(112, 66, 248, 0.08);
+}
+
+.music-toggle-btn:hover {
+  border-color: rgba(112, 66, 248, 0.5);
+  background: rgba(112, 66, 248, 0.15);
+  box-shadow: 0 4px 24px rgba(112, 66, 248, 0.25), 0 0 20px rgba(112, 66, 248, 0.1);
+  transform: scale(1.08);
+}
+
+.music-icon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animated pulsing rings */
+.music-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid rgba(112, 66, 248, 0.3);
+  animation: musicPulse 2.5s ease-out infinite;
+  pointer-events: none;
+}
+
+.music-ring-1 { animation-delay: 0s; }
+.music-ring-2 { animation-delay: 0.8s; }
+.music-ring-3 { animation-delay: 1.6s; }
+
+@keyframes musicPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .music-toggle-btn {
+    bottom: 90px;
+    left: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}
