@@ -1,5 +1,6 @@
 import { AboutConnect } from "@/components/main/about-connect";
 import { BuildProcess } from "@/components/main/build-process";
+import { GitHubStreak } from "@/components/main/github-streak";
 import { Hero } from "@/components/main/hero";
 import { Projects } from "@/components/main/projects";
 import { Skills } from "@/components/main/skills";
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <Skills />
         <Projects />
+        <GitHubStreak />
         <BuildProcess />
         <AboutConnect />
       </div>

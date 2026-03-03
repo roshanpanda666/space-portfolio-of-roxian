@@ -358,6 +358,10 @@ export const NAV_LINKS = [
     link: "#projects",
   },
   {
+    title: "GitHub",
+    link: "#github-streak",
+  },
+  {
     title: "Connect",
     link: "/connect",
   },
