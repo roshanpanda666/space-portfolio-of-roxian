@@ -5,8 +5,11 @@ import { Hero } from "@/components/main/hero";
 import { Projects } from "@/components/main/projects";
 import { Skills } from "@/components/main/skills";
 import { StarshipScroll } from "@/components/main/starship-scroll";
+import { getSocialLinks } from "@/lib/social-links";
 
 export default function Home() {
+  const links = getSocialLinks();
+
   return (
     <main className="h-full w-full">
       <StarshipScroll />
@@ -16,7 +19,7 @@ export default function Home() {
         <Projects />
         <GitHubStreak />
         <BuildProcess />
-        <AboutConnect />
+        <AboutConnect instagramUrl={links.instagram} />
       </div>
     </main>
   );

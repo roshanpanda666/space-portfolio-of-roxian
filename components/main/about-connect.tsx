@@ -137,8 +137,15 @@ const staggerContainer = {
   },
 };
 
-export const AboutConnect = () => {
+export const AboutConnect = ({ instagramUrl }: { instagramUrl?: string }) => {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
+
+  // Override Instagram link dynamically if provided
+  const socialLinks = instagramUrl
+    ? SOCIAL_LINKS.map((s) =>
+        s.name === "Instagram" ? { ...s, link: instagramUrl } : s
+      )
+    : SOCIAL_LINKS;
 
   return (
     <section
@@ -316,7 +323,7 @@ export const AboutConnect = () => {
           variants={staggerContainer}
           className="flex flex-wrap justify-center gap-4"
         >
-          {SOCIAL_LINKS.map((social) => (
+          {socialLinks.map((social) => (
             <motion.div key={social.name} variants={fadeInUp()}>
               <Link
                 href={social.link}
