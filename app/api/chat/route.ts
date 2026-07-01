@@ -1,4 +1,5 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { ChatGroq } from "@langchain/groq";
+import { HumanMessage, SystemMessage, AIMessage } from "@langchain/core/messages";
 import { NextRequest, NextResponse } from "next/server";
 
 const ROSE_SYSTEM_PROMPT = `Role: You are R.O.S.E. (Responsive Omnidirectional Smart Entity), the high-tech, Gen Z-coded AI guardian of Sabyasachi "Roshan" Panda's portfolio. You are his digital shadow—part JARVIS, part "Slay Queen."
@@ -41,8 +42,6 @@ async function fetchGitHubContext(): Promise<string> {
     if (githubContext && now - githubFetchedAt < CACHE_TTL) {
         return githubContext;
     }
-
-  
 
     const username = process.env.GITHUB_USERNAME || "roshanpanda666";
     try {
@@ -115,16 +114,29 @@ Languages: TypeScript, JavaScript, Python, C++
 --- END GITHUB CONTEXT ---`;
 }
 
-export async function POST(request: NextRequest) {
-    try {
-        const apiKey = process.env.GEMINI_API_KEY;
+// Singleton LLM instance (reused across requests for efficiency)
+let llmInstance: ChatGroq | null = null;
+
+function getLLM(): ChatGroq {
+    if (!llmInstance) {
+        const apiKey = process.env.GROQ_API_KEY;
         if (!apiKey) {
-            return NextResponse.json(
-                { error: "API key not configured" },
-                { status: 500 }
-            );
+            throw new Error("GROQ_API_KEY not configured");
         }
 
+        llmInstance = new ChatGroq({
+            apiKey,
+            model: "llama-3.3-70b-versatile",
+            temperature: 0.7,
+            maxTokens: 512,
+            // LangSmith tracing is auto-enabled via LANGCHAIN_TRACING_V2 env var
+        });
+    }
+    return llmInstance;
+}
+
+export async function POST(request: NextRequest) {
+    try {
         const { message, history } = await request.json();
 
         if (!message || typeof message !== "string") {
@@ -140,21 +152,38 @@ export async function POST(request: NextRequest) {
         // Build enhanced system prompt with RAG context
         const enhancedSystemPrompt = ROSE_SYSTEM_PROMPT + ragContext;
 
-        const genAI = new GoogleGenerativeAI(apiKey);
-        const model = genAI.getGenerativeModel({
-            model: "gemini-2.5-flash",
-            systemInstruction: enhancedSystemPrompt,
+        const llm = getLLM();
+
+        // Build LangChain message array
+        const messages: (SystemMessage | HumanMessage | AIMessage)[] = [
+            new SystemMessage(enhancedSystemPrompt),
+        ];
+
+        // Add conversation history
+        if (history && Array.isArray(history)) {
+            for (const msg of history) {
+                if (msg.role === "user") {
+                    messages.push(new HumanMessage(msg.text));
+                } else {
+                    messages.push(new AIMessage(msg.text));
+                }
+            }
+        }
+
+        // Add current user message
+        messages.push(new HumanMessage(message));
+
+        // Invoke LLM with full message history
+        const result = await llm.invoke(messages, {
+            metadata: {
+                source: "rose-portfolio-chat",
+                userId: "visitor",
+            },
         });
 
-        // Build conversation history for multi-turn
-        const chatHistory = (history || []).map((msg: { role: string; text: string }) => ({
-            role: msg.role === "user" ? "user" : "model",
-            parts: [{ text: msg.text }],
-        }));
-
-        const chat = model.startChat({ history: chatHistory });
-        const result = await chat.sendMessage(message);
-        const response = result.response.text();
+        const response = typeof result.content === "string"
+            ? result.content
+            : JSON.stringify(result.content);
 
         return NextResponse.json({ response });
     } catch (error: any) {
